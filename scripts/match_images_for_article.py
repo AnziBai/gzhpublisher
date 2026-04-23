@@ -209,13 +209,14 @@ def insert_images_into_article(
     3. 在对应段落后插入图片
     4. 避免连续插入（至少间隔2个段落）
     """
-    # 提取文章中已有的图片路径
+    # 提取文章中已有的图片路径（同时匹配 Markdown ![]() 和 HTML <img src=""> 格式）
     existing_images = set()
-    for match in re.finditer(r'!\[.*?\]\((.*?)\)', article):
-        img_path = match.group(1)
-        # 标准化路径（统一使用正斜杠）
-        img_path_normalized = img_path.replace("\\", "/")
-        existing_images.add(img_path_normalized)
+    for match in re.finditer(r'!\[.*?\]\((.*?)\)|<img[^>]+src=["\']([^"\']+)["\']', article):
+        img_path = match.group(1) or match.group(2)
+        if img_path:
+            # 标准化路径（统一使用正斜杠）
+            img_path_normalized = img_path.replace("\\", "/")
+            existing_images.add(img_path_normalized)
 
     if existing_images:
         print(f"文章中已有 {len(existing_images)} 张图片，将避免重复插入")
@@ -238,8 +239,16 @@ def insert_images_into_article(
     # 按段落位置排序（从后往前插入，避免位置偏移）
     selected_images.sort(key=lambda x: x[3], reverse=True)
 
-    # 分段
-    paragraphs = split_article_into_paragraphs(article)
+    # 拆分原文所有块（保留标题、分隔线等）
+    all_blocks = re.split(r'\n\s*\n', article)
+
+    # 建立 content_paragraph_index → all_blocks_index 的映射
+    # （与 split_article_into_paragraphs 使用相同的过滤条件）
+    content_block_indices = []
+    for block_idx, block in enumerate(all_blocks):
+        stripped = block.strip()
+        if len(stripped) > 20 and not stripped.startswith('---') and not stripped.startswith('#') and not stripped.startswith('!['):
+            content_block_indices.append(block_idx)
 
     # 插入图片
     last_inserted_para = 999999  # 上次插入的段落索引（初始化为很大的数）
@@ -251,14 +260,14 @@ def insert_images_into_article(
             print(f"  - 跳过距离过近的图片: {img_desc} (段落{para_idx+1})")
             continue
 
-        # 在段落后插入图片
-        if para_idx < len(paragraphs):
+        # 在段落后插入图片（操作 all_blocks 而非 paragraphs，保留标题/分隔线）
+        if para_idx < len(content_block_indices):
+            block_idx = content_block_indices[para_idx]
             # 转换为正斜杠路径（wenyan-mcp要求）
             img_path_normalized = img_path.replace("\\", "/")
 
-            # 插入Markdown图片语法
-            image_markdown = f"\n\n![{img_desc}]({img_path_normalized})\n\n"
-            paragraphs[para_idx] += image_markdown
+            # 插入HTML img标签（wenyan-mcp可上传本地路径，但Markdown![]()格式会退化为文字）
+            all_blocks[block_idx] += f'\n\n<img src="{img_path_normalized}" alt="{img_desc}" style="border-radius: 8px; max-width: 100%;" />'
 
             last_inserted_para = para_idx
             inserted_count += 1
@@ -267,8 +276,8 @@ def insert_images_into_article(
 
     print(f"\n共插入 {inserted_count} 张图片")
 
-    # 重新组合文章
-    return "\n\n".join(paragraphs)
+    # 重新组合文章（all_blocks 包含完整原文结构）
+    return "\n\n".join(all_blocks)
 
 def main():
     if len(sys.argv) < 2:
