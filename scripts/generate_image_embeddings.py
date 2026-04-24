@@ -111,8 +111,9 @@ def scan_image_library(image_dir: str) -> dict:
 
 def main():
     # 从环境变量或命令行参数获取配置
-    image_dir = sys.argv[1] if len(sys.argv) > 1 else "C:/Users/anzib/OneDrive/图片/概率的朋友配图"
-    output_file = sys.argv[2] if len(sys.argv) > 2 else "C:/Users/anzib/gzhpublisher/config/image_embeddings_index.json"
+    _repo_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    image_dir = sys.argv[1] if len(sys.argv) > 1 else os.path.join(_repo_root, "assets", "概率的朋友配图")
+    output_file = sys.argv[2] if len(sys.argv) > 2 else os.path.join(_repo_root, "config", "image_embeddings_index.json")
 
     print(f"图库目录: {image_dir}")
     print(f"输出文件: {output_file}")

@@ -9,8 +9,10 @@ import sys
 import os
 import re
 
-# 添加scripts目录到路径
-sys.path.insert(0, "C:/Users/anzib/gzhpublisher/scripts")
+# 添加scripts目录到路径（使用 __file__ 相对路径，支持任意机器）
+SCRIPTS_DIR = os.path.dirname(os.path.abspath(__file__))
+REPO_ROOT = os.path.dirname(SCRIPTS_DIR)
+sys.path.insert(0, SCRIPTS_DIR)
 
 from match_images_for_article import match_images_for_article, insert_images_into_article
 
@@ -43,7 +45,7 @@ def main():
         sys.exit(1)
 
     article_path = sys.argv[1]
-    index_path = "C:/Users/anzib/gzhpublisher/config/image_embeddings_index.json"
+    index_path = os.path.join(REPO_ROOT, "config", "image_embeddings_index.json")
 
     # 读取文章
     with open(article_path, 'r', encoding='utf-8') as f:

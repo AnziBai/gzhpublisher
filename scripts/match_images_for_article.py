@@ -287,7 +287,7 @@ def main():
 
     article_path = sys.argv[1]
     output_path = sys.argv[2] if len(sys.argv) > 2 else article_path.replace(".md", "_with_images.md")
-    index_path = "C:/Users/anzib/gzhpublisher/config/image_embeddings_index.json"
+    index_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "config", "image_embeddings_index.json")
 
     # 读取文章
     with open(article_path, 'r', encoding='utf-8') as f:

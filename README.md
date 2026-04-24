@@ -81,7 +81,7 @@ pip install requests pillow
 |------|------|---------|
 | GLM API（bigmodel.cn） | 图片语义匹配（embedding-3 + GLM-5.1） | 注册后申请，有免费额度 |
 | 微信公众号 AppID/AppSecret | 发布文章到草稿箱 | 需要公众号管理员权限 |
-| OneDrive（与管理员同步） | 书籍配图库、二维码、FREE 动图 | 找管理员共享 `概率的朋友配图` 文件夹 |
+| ~~OneDrive~~ | ~~书籍配图库、二维码、FREE 动图~~ | **已包含在仓库 `assets/` 目录，无需额外配置** |
 
 ---
 
@@ -94,13 +94,13 @@ git clone https://github.com/AnziBai/gzhpublisher.git
 cd gzhpublisher
 ```
 
-### 3.2 同步图片资源（重要）
+### 3.2 图片资源（已包含在仓库中）
 
-联系管理员获取 OneDrive 文件夹共享链接，确保以下路径存在：
+图片资源已随仓库一起提供，克隆后即可使用，无需额外同步：
 
 ```
-C:\Users\{你的用户名}\OneDrive\图片\
-├── 概率的朋友配图\        # 105 张书中图表（配图系统依赖）
+gzhpublisher/assets/
+├── 概率的朋友配图/        # 105 张书中图表（配图系统依赖）
 │   ├── 图 4.22 持续稳定的回报.jpg
 │   ├── 图 6.5 交易的三大要素.jpg
 │   └── ...（共 105 张）
@@ -109,9 +109,7 @@ C:\Users\{你的用户名}\OneDrive\图片\
 └── 免费free.gif            # FREE 动图（文章结尾固定模块）
 ```
 
-> **注意**：如果你的 OneDrive 路径不同，需要修改以下两处：
-> 1. `scripts/match_images_for_article.py` 第 290 行的 `index_path`
-> 2. `scripts/generate_image_embeddings.py` 中的图片目录参数
+> **注意**：`config/image_embeddings_index.json` 中的图片路径是绝对路径，在新机器上第一次使用前需运行 [步骤 3.5](#35-重建图片向量索引) 重建索引。
 
 ### 3.3 配置 GLM API Key
 
@@ -146,15 +144,14 @@ wenyan-mcp 负责将文章发布到微信公众号。在 `~/.claude/.claude.json
 
 ### 3.5 重建图片向量索引
 
-如果是第一次使用（或图库有更新），重建索引：
+**第一次使用时必须运行**（索引中的绝对路径因机器而异）：
 
 ```bash
-python scripts/generate_image_embeddings.py \
-  "C:/Users/{你的用户名}/OneDrive/图片/概率的朋友配图" \
-  config/image_embeddings_index.json
+cd gzhpublisher
+python scripts/generate_image_embeddings.py
 ```
 
-约 2-3 分钟完成，索引文件大小约 4.3MB。
+默认自动使用 `assets/概率的朋友配图` 作为图库目录，约 2-3 分钟完成，索引写入 `config/image_embeddings_index.json`（约 4.3MB）。
 
 ### 3.6 部署 Agent 到 Claude Code
 
@@ -207,7 +204,7 @@ python scripts/generate_image_embeddings.py \
 ---
 title: 文章标题（≤64 字符）
 author: 宽论
-cover: C:/Users/.../概率的朋友配图/图X.X xxx.jpg
+cover: C:/Users/{你的用户名}/gzhpublisher/assets/概率的朋友配图/图X.X xxx.jpg
 ---
 ```
 
@@ -350,6 +347,12 @@ gzhpublisher/
 │   ├── generate_image_embeddings.py     # 重建图片向量索引
 │   └── pdf_image_extractor.py           # 从 PDF 提取图片
 │
+├── assets/                              # 图片资源（随仓库提供）
+│   ├── 概率的朋友配图/                  # 105 张书中图表
+│   ├── 概率的朋友封面.jpg
+│   ├── 微信二维码-桥楚.jpg
+│   └── 免费free.gif
+│
 ├── articles/
 │   ├── published/                       # 已发布文章（每篇 = 一个 git checkpoint）
 │   └── drafts/                          # 草稿
@@ -410,7 +413,7 @@ wenyan-mcp 从 YAML frontmatter 的 `title` 字段提取标题，不识别正文
 ---
 title: 文章标题
 author: 宽论
-cover: C:/Users/.../概率的朋友配图/图X.X xxx.jpg
+cover: C:/Users/{你的用户名}/gzhpublisher/assets/概率的朋友配图/图X.X xxx.jpg
 ---
 ```
 
