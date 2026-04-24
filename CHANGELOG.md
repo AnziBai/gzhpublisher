@@ -2,6 +2,24 @@
 
 ## [Unreleased]
 
+## [1.1.0] — 2026-04-24
+
+### 流程优化
+- 模型路由：第1步生成改用 Opus，第2-4步委派 Sonnet executor agent，节省 token
+- 文章篇幅调整为 2000 字左右，配图 4-5 张（从 3000-4000 字 / 5-8 张降档）
+- `max_images_per_article` 调整为 5
+
+### Bug 修复
+- `match_images_for_article.py`：`insert_images_into_article` 改为操作 `all_blocks`（含所有原始块），
+  修复之前重建文章时丢失 `##` 标题和 `---` 分隔线的问题
+- `kuanlun-article-auditor.md`：新增图片 URL 格式检查（内容图片必须为 Web URL 或 `<img>` 标签）
+  和发布主题检查（默认 orangeheart）
+
+### 已发布文章
+- MACD背离——高手藏着不说的技巧（Media ID: `_D93UH1J7L1p5g5_Coy3GT6a24tibsMxeI9qzgdytAZFDggOGmFFrMTbg_rjFrit`）
+- 7种K线形态的量化真相（Media ID: `_D93UH1J7L1p5g5_Coy3Getki33pzacLbzKA3vDxb754N8o2FixBUUgX3CDj33Lp`）
+- 90%散户亏钱的真相：你一直在和概率作对（Media ID: `_D93UH1J7L1p5g5_Coy3GdLq5MycbgrechwlclH2y5y9zU_LgPrQi2kLq4H_rAQW`）
+
 ## [1.0.0] — 2026-04-23
 
 ### 项目初始化
