@@ -2,6 +2,20 @@
 title: 缠论学了3年还是亏钱怎么办
 date: 2026-04-21
 tags: [缠论, 量化交易, 技术分析]
+cover: C:/Users/anzib/gzhpublisher/assets/概率的朋友配图/图 3.40 各量化指标的准确性对比（以 2007 年上证指数创新高行情内各指标开平仓位置为例）.jpg
+---
+
+---
+title: 缠论学了3年还是亏钱怎么办
+date: 2026-04-21
+tags: [缠论, 量化交易, 技术分析]
+cover: C:/Users/anzib/gzhpublisher/assets/概率的朋友配图/图 3.32 ATR+MACD 针对上证 50 指数所有个股品种做历史回测损益图.jpg
+---
+
+---
+title: 缠论学了3年还是亏钱怎么办
+date: 2026-04-21
+tags: [缠论, 量化交易, 技术分析]
 ---
 
 <svg width="100%" height="80" viewBox="0 0 800 80" xmlns="http://www.w3.org/2000/svg">
@@ -45,8 +59,12 @@ QMACD（Quantitative MACD）是宽论体系的核心工具，将缠论的笔、�
 - 量化背驰信号，用MACD柱状图面积差计算背驰强度
 - 标注中枢区间，清晰显示支撑压力位
 
+<img src="C:/Users/anzib/gzhpublisher/assets/概率的朋友配图/图 3.5 MACD 指标钝化形态.jpg" alt="图 3.5 MACD 指标钝化形态" style="border-radius: 8px; max-width: 100%;" />
+
 **实战案例**  
 某用户使用QMACD后，将缠论识别准确率从60%提升到85%，月均收益从-5%转为+12%。关键改变是：从"我觉得这里背驰"变成"QMACD显示背驰强度-15%，符合开仓条件"。
+
+<img src="C:/Users/anzib/gzhpublisher/assets/概率的朋友配图/图 3.32 ATR+MACD 针对上证 50 指数所有个股品种做历史回测损益图.jpg" alt="图 3.32 ATR+MACD 针对上证 50 指数所有个股品种做历史回测损益图" style="border-radius: 8px; max-width: 100%;" />
 
 ### 第二步：构建完整交易系统
 
@@ -75,6 +93,8 @@ QMACD（Quantitative MACD）是宽论体系的核心工具，将缠论的笔、�
 
 **工具支持**  
 宽论社区提供历史复盘工具，可以一键回放任意时间段的K线，对比QMACD信号与实际走势，快速积累经验。
+
+<img src="C:/Users/anzib/gzhpublisher/assets/概率的朋友配图/图 3.32 ATR+MACD 针对上证 50 指数所有个股品种做历史回测损益图.jpg" alt="图 3.32 ATR+MACD 针对上证 50 指数所有个股品种做历史回测损益图" style="border-radius: 8px; max-width: 100%;" />
 
 ## 真实案例：从亏损到稳定盈利
 
@@ -117,6 +137,8 @@ QMACD（Quantitative MACD）是宽论体系的核心工具，将缠论的笔、�
 **Q1：QMACD和传统MACD有什么区别？**  
 传统MACD只显示趋势强弱，QMACD在此基础上增加了笔段标注、背驰量化、中枢识别功能，专为缠论设计。
 
+<img src="C:/Users/anzib/gzhpublisher/assets/概率的朋友配图/图 3.3 MACD 图示.jpg" alt="图 3.3 MACD 图示" style="border-radius: 8px; max-width: 100%;" />
+
 **Q2：学习宽论体系需要多久？**  
 如果已有缠论基础，1-2周可掌握QMACD使用方法，3个月可建立完整交易系统。
 
@@ -126,8 +148,12 @@ A股、港股、期货、数字货币均适用。QMACD基于K线数据，不依�
 **Q4：没有编程基础能用吗？**  
 可以。QMACD提供图形化界面，无需编程。如需自动化交易，社区提供Python/C++代码模板。
 
+<img src="C:/Users/anzib/gzhpublisher/assets/概率的朋友配图/图 7.1 程序化交易四大优势.jpg" alt="图 7.1 程序化交易四大优势" style="border-radius: 8px; max-width: 100%;" />
+
 **Q5：如何验证系统有效性？**  
 使用历史回测工具，在过去3年的真实行情中测试策略，查看胜率、盈亏比、最大回撤等指标。
+
+<img src="C:/Users/anzib/gzhpublisher/assets/概率的朋友配图/图 3.40 各量化指标的准确性对比（以 2007 年上证指数创新高行情内各指标开平仓位置为例）.jpg" alt="图 3.40 各量化指标的准确性对比（以 2007 年上证指数创新高行情内各指标开平仓位置为例）" style="border-radius: 8px; max-width: 100%;" />
 
 ---
 
