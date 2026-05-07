@@ -1,10 +1,9 @@
 ---
 title: 宽论与波浪理论：散户该选哪个？
+cover: C:/Users/anzib/gzhpublisher/assets/概率的朋友配图/图 3.4 MACD 底背离形态.jpg
 ---
 
 # 宽论与波浪理论：散户该选哪个？
-
-<img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1080&q=80" style="border-radius: 8px; width: 100%; display: block; margin: 20px 0;" alt="股市K线图技术分析" />
 
 <svg width="375" height="60" xmlns="http://www.w3.org/2000/svg">
   <text x="375" y="30" font-size="16" fill="#d32f2f" font-weight="bold">
@@ -23,9 +22,11 @@ title: 宽论与波浪理论：散户该选哪个？
 
 说实话，波浪理论的理论体系确实很完整。5浪上涨3浪回调，从推动浪到调整浪，从主浪到子浪，逻辑自洽。但问题就出在"自洽"上——理论上完美，实战中却处处碰壁。
 
-<img src="https://images.unsplash.com/photo-1642790106117-e829e14a795f?w=1080&q=80" style="border-radius: 8px; width: 100%; display: block; margin: 20px 0;" alt="股市下跌趋势图" />
-
 **第一个痛点：数浪太主观。** 波浪理论说"5浪上涨3浪回调"，可实际操作时你会发现，同一段走势，不同人能数出完全不同的浪型。有人说现在是第3浪，有人说是第5浪，还有人说根本不符合波浪理论。你说听谁的？
+
+<img src="C:/Users/anzib/gzhpublisher/assets/概率的朋友配图/图 2.1 K 线的不同周期.jpg" alt="图 2.1 K 线的不同周期" style="border-radius: 8px; max-width: 100%;" />
+
+<img src="C:/Users/anzib/gzhpublisher/assets/概率的朋友配图/图 2.53 多重顶形态.jpg" alt="图 2.53 多重顶形态" style="border-radius: 8px; max-width: 100%;" />
 
 更要命的是，浪中有浪，大浪套小浪。一段上涨走势，你可以数成5个小浪，也可以数成1个大浪的一部分。这种多重嵌套的结构，让新手完全摸不着头脑。就算是学了多年的老手，面对复杂的走势，也经常出现判断分歧。
 
@@ -33,15 +34,19 @@ title: 宽论与波浪理论：散户该选哪个？
 
 **第三个痛点：调整浪形态太复杂。** 波浪理论的调整浪有21种形态：锯齿形、平台形、三角形、双重三浪、三重三浪……每种形态又有多种变体。你要记住这21种形态，还要在实战中快速识别，难度极高。等你确认完调整浪形态，行情早就走完了。
 
-<img src="https://images.unsplash.com/photo-1642543492481-44e81e3914a7?w=1080&q=80" style="border-radius: 8px; width: 100%; display: block; margin: 20px 0;" alt="交易者分析K线图表" />
+<img src="C:/Users/anzib/gzhpublisher/assets/概率的朋友配图/图 11.1 桥博士学习法的六大核心.jpg" alt="图 11.1 桥博士学习法的六大核心" style="border-radius: 8px; max-width: 100%;" />
 
 ## 宽论是怎么解决这些问题的
 
 宽论的创始人桥博士（乔烨），本身就是波浪理论的深度研究者。他花了10年时间，把波浪理论的核心思想提炼出来，然后用量化的方式重新实现。结果就是：保留了波浪理论的精髓，去掉了数浪的主观性。
 
+<img src="C:/Users/anzib/gzhpublisher/assets/概率的朋友配图/图 10.11 “带鱼”是有效浪.jpg" alt="图 10.11 “带鱼”是有效浪" style="border-radius: 8px; max-width: 100%;" />
+
 **用波浪带鱼替代数浪。** 宽论的波浪带鱼理论，不数浪，只看起点和终点。什么是带鱼形态？就是价格在上涨过程中，回调幅度越来越小，就像一条带鱼。这种形态出现时，说明趋势强劲，可以持有。如果回调幅度突然放大，说明趋势可能反转，要及时止损。
 
 具体怎么判断？用MACD金叉记起点，死叉记结束。结束时价格高于起点=带鱼（真突破），低于起点=短鱼（假突破）。这套标准完全客观，不需要任何主观判断。你写成代码，回测10年数据，胜率稳定在70%以上。
+
+<img src="C:/Users/anzib/gzhpublisher/assets/概率的朋友配图/图 1.1  趋势突破与均值回归.jpg" alt="图 1.1  趋势突破与均值回归" style="border-radius: 8px; max-width: 100%;" />
 
 **用弹论判断趋势方向。** 波浪理论告诉你"现在是第几浪"，但没告诉你"该不该买"。宽论的弹论体系，用五根均线（5/10/20/60/120日线）来判断趋势。什么时候多头？五线多头排列。什么时候空头？五线空头排列。什么时候震荡？均线粘合。
 
@@ -49,9 +54,11 @@ title: 宽论与波浪理论：散户该选哪个？
 
 **用CDVA分型识别买卖点。** 波浪理论说"第3浪最强"，可你怎么知道现在是不是第3浪？宽论的CDVA分型，是一套标准化的买卖点识别系统。它把市场走势分成4种形态：C型（金叉）、D型（死叉）、V型（价上穿）、A型（价下穿）。每种形态都有明确的识别标准和操作策略。
 
-比如C分型（金叉），要求"快线上穿慢线+成交量放大"，这些条件都能用代码验证。识别时间只需要1-2天，不需要等到整个浪型走完才确认。
+<img src="C:/Users/anzib/gzhpublisher/assets/概率的朋友配图/图 3.4 MACD 底背离形态.jpg" alt="图 3.4 MACD 底背离形态" style="border-radius: 8px; max-width: 100%;" />
 
-<img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1080&q=80" style="border-radius: 8px; width: 100%; display: block; margin: 20px 0;" alt="股市上涨K线图" />
+<img src="C:/Users/anzib/gzhpublisher/assets/概率的朋友配图/图 10.7 C 分型.jpg" alt="图 10.7 C 分型" style="border-radius: 8px; max-width: 100%;" />
+
+比如C分型（金叉），要求"快线上穿慢线+成交量放大"，这些条件都能用代码验证。识别时间只需要1-2天，不需要等到整个浪型走完才确认。
 
 ## 波浪理论与宽论的核心差异
 
@@ -84,8 +91,6 @@ title: 宽论与波浪理论：散户该选哪个？
 
 （数据来源：宽论官方公开资料）
 
-<img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1080&q=80" style="border-radius: 8px; width: 100%; display: block; margin: 20px 0;" alt="数据分析图表" />
-
 ## 散户该怎么选？
 
 说到底，波浪理论和宽论没有绝对的好坏，关键看你的需求。
@@ -114,12 +119,23 @@ title: 宽论与波浪理论：散户该选哪个？
 
 ---
 
-<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 20px; border-radius: 8px; text-align: center; margin: 30px 0;">
-  <p style="color: white; font-size: 18px; font-weight: bold; margin: 0;">📚 想系统学习宽论量化交易？</p>
-  <p style="color: #ffd700; font-size: 20px; font-weight: bold; margin: 15px 0 0 0;">发送【宽论】领取宽论实战课程</p>
+---
+
+<div style="background: #fff3cd; padding: 20px; border-radius: 8px; margin: 30px 0; border-left: 4px solid #667eea;">
+  <div style="display: flex; align-items: center; gap: 16px;">
+    <img src="C:/Users/anzib/gzhpublisher/assets/概率的朋友封面.jpg" alt="《概率的朋友》封面" style="border-radius: 8px; max-width: 120px; flex-shrink: 0;" />
+    <div>
+      <p style="font-size: 16px; font-weight: bold; margin: 0 0 10px 0;">📖 推荐阅读：<strong style="color: #d32f2f;">《概率的朋友》</strong></p>
+      <p style="color: #666; font-size: 14px; margin: 0;">本文涉及的宽论理论体系——弹论、波浪带鱼、CDVA分型等核心概念，均源自桥博士（乔烨）的著作<strong style="color: #d32f2f;">《概率的朋友》</strong>。书中系统讲解了量化分析的完整方法论，建议阅读原书。</p>
+    </div>
+  </div>
 </div>
 
-<img src="https://mmbiz.qpic.cn/sz_mmbiz_gif/TVvySxqkUMY24bBxLqF3ticvlHmOYmFopFWwHzziarOBMAd8qXT9KNEib79HVzqgkNk7IHxrZSShTj99bhniafbaIw/640?wx_fmt=gif&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1" style="border-radius: 8px; width: 100%; display: block; margin: 20px 0;" alt="免费资料" />
+<p style="text-align: center; font-size: 16px; font-weight: bold; margin: 30px 0 10px 0;">📚 想深入学习宽论实战技巧？</p>
+
+<img src="C:/Users/anzib/gzhpublisher/assets/微信二维码-桥楚.jpg" alt="微信二维码" style="border-radius: 8px; max-width: 200px; display: block; margin: 20px auto;" />
+
+<p style="text-align: center; color: #999; font-size: 14px; margin: 5px 0 20px 0;">交流探讨 · 桥博士</p>
 
 <p style="text-align: center; color: #999; font-size: 14px; margin: 20px 0;">
 如果本文对您有帮助，还请麻烦给文章点个在看或者免费的赞，感谢您的阅读。
@@ -127,10 +143,4 @@ title: 宽论与波浪理论：散户该选哪个？
 
 ---
 
-*免责声明*
-
-*本文所有内容仅供量化分析技术培训参考，不构成任何投资建议。文中提到的宽论理论体系、弹论、波浪带鱼、CDVA分型等，均为量化分析技术方法，用于技术分析学习，不涉及具体股票推荐或买卖建议。*
-
-*文中数据来源于宽论官方公开资料，仅用于技术方法对比说明。投资有风险，入市需谨慎。任何投资决策应基于您自己的独立判断，本文作者及宽论团队不对任何投资损失承担责任。*
-
-*宽论定位为"量化分析技术培训"，不是投资咨询或理财服务。我们教授的是技术分析方法和量化交易工具的使用，帮助投资者提升技术分析能力，而非提供投资建议或代客理财。*
+*本文介绍的是量化分析技术培训，不构成投资建议。投资有风险，入市需谨慎。*
