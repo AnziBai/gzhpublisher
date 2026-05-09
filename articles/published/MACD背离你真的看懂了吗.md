@@ -21,8 +21,6 @@ cover: C:/Users/anzib/gzhpublisher/assets/概率的朋友配图/图 3.4 MACD 底
 
 MACD背离，是我学得最慢、交了最多学费的一个概念。
 
-<img src="C:/Users/anzib/gzhpublisher/assets/概率的朋友配图/图 10.2 人生成功概率的加分项.jpg" alt="人生成功概率的加分项" style="border-radius: 8px; max-width: 100%;" />
-
 ## MACD背离是什么？
 
 MACD背离是一个趋势减弱信号：

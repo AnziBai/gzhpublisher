@@ -11,8 +11,6 @@ cover: C:/Users/anzib/gzhpublisher/assets/概率的朋友配图/图 3.15 MACD �
 </div>
 <style>@keyframes marquee { from { transform: translateX(100vw); } to { transform: translateX(-100%); } }</style>
 
-<img src="C:/Users/anzib/gzhpublisher/assets/概率的朋友配图/图 7.2 高频交易对市场的影响.jpg" alt="图 7.2 高频交易对市场的影响" style="border-radius: 8px; max-width: 100%;" />
-
 日内交易一个交易日7200秒，真正的操作时间有多少？
 
 **最多5秒。**

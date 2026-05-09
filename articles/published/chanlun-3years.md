@@ -5,19 +5,6 @@ tags: [缠论, 量化交易, 技术分析]
 cover: C:/Users/anzib/gzhpublisher/assets/概率的朋友配图/图 3.40 各量化指标的准确性对比（以 2007 年上证指数创新高行情内各指标开平仓位置为例）.jpg
 ---
 
----
-title: 缠论学了3年还是亏钱怎么办
-date: 2026-04-21
-tags: [缠论, 量化交易, 技术分析]
-cover: C:/Users/anzib/gzhpublisher/assets/概率的朋友配图/图 3.32 ATR+MACD 针对上证 50 指数所有个股品种做历史回测损益图.jpg
----
-
----
-title: 缠论学了3年还是亏钱怎么办
-date: 2026-04-21
-tags: [缠论, 量化交易, 技术分析]
----
-
 <svg width="100%" height="80" viewBox="0 0 800 80" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -51,7 +38,7 @@ tags: [缠论, 量化交易, 技术分析]
 
 ### 第一步：建立量化识别系统
 
-![stock chart](https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&h=400&fit=crop)
+<img src="C:/Users/anzib/gzhpublisher/assets/概率的朋友配图/图 3.3 MACD 图示.jpg" alt="MACD图示" style="border-radius: 8px; max-width: 100%;" />
 
 **工具推荐：QMACD指标**  
 QMACD（Quantitative MACD）是宽论体系的核心工具，将缠论的笔、线段、中枢进行量化标注。使用QMACD后，你可以：
@@ -68,7 +55,7 @@ QMACD（Quantitative MACD）是宽论体系的核心工具，将缠论的笔、�
 
 ### 第二步：构建完整交易系统
 
-![candlestick](https://images.unsplash.com/photo-1642790106117-e829e14a795f?w=800&h=400&fit=crop)
+<img src="C:/Users/anzib/gzhpublisher/assets/概率的朋友配图/图 1.3 海龟交易法则与 MACD 模型的权益图（2000.1.1—2025.9.29）.jpg" alt="MACD权益图" style="border-radius: 8px; max-width: 100%;" />
 
 **宽论体系的四大模块**
 
@@ -84,7 +71,7 @@ QMACD（Quantitative MACD）是宽论体系的核心工具，将缠论的笔、�
 
 ### 第三步：持续复盘与优化
 
-![red chart](https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=800&h=400&fit=crop)
+<img src="C:/Users/anzib/gzhpublisher/assets/概率的朋友配图/图 1.5 胜率盈亏.jpg" alt="胜率盈亏" style="border-radius: 8px; max-width: 100%;" />
 
 **复盘三问**
 1. **识别准确吗？** 回看历史K线，检查笔、线段、中枢的标注是否正确
@@ -98,7 +85,7 @@ QMACD（Quantitative MACD）是宽论体系的核心工具，将缠论的笔、�
 
 ## 真实案例：从亏损到稳定盈利
 
-![bull market](https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&h=400&fit=crop)
+<img src="C:/Users/anzib/gzhpublisher/assets/概率的朋友配图/图 10.3 如何提高整体收益.jpg" alt="如何提高整体收益" style="border-radius: 8px; max-width: 100%;" />
 
 **案例背景**  
 某学员学习缠论3年，理论扎实，但实盘亏损累计-18%。2025年6月接触宽论体系后，用3个月时间实现扭亏为盈。
@@ -115,7 +102,7 @@ QMACD（Quantitative MACD）是宽论体系的核心工具，将缠论的笔、�
 
 ## 行动指南：立即可执行的3件事
 
-![green chart](https://images.unsplash.com/photo-1642790106117-e829e14a795f?w=800&h=400&fit=crop)
+<img src="C:/Users/anzib/gzhpublisher/assets/概率的朋友配图/图 10.15 如何降低投资风险.jpg" alt="如何降低投资风险" style="border-radius: 8px; max-width: 100%;" />
 
 ### 1. 量化你的缠论知识
 - 下载QMACD指标（宽论官网免费提供）

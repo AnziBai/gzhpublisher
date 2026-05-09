@@ -11,8 +11,6 @@ cover: C:/Users/anzib/gzhpublisher/assets/概率的朋友配图/图 3.33 KDJ 指
 </div>
 <style>@keyframes marquee { from { transform: translateX(100vw); } to { transform: translateX(-100%); } }</style>
 
-<img src="C:/Users/anzib/gzhpublisher/assets/概率的朋友配图/图 3.24 2020 年 A 股“穿头破脚”的走势.jpg" alt="图 3.24 2020 年 A 股“穿头破脚”的走势" style="border-radius: 8px; max-width: 100%;" />
-
 对于A股这样牛短熊长、长期震荡的市场，只要能踩准买卖时点，简单的低买高卖也可以取得不错的收益。
 
 "低买高卖"看上去很简单，但实操起来并不容易。KDJ就是很多短线交易者用来判断出入场时机的技术指标。它通过计算个股近期的最高价、最低价和收盘价，利用价格波动的幅度来分析市场的超买超卖情况。
