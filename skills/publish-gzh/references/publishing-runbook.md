@@ -10,6 +10,9 @@ This runbook captures the stable publishing behavior for gzhpublisher.
 Do not pass `app_id`, `content`, or other fields unless the repository
 documentation is intentionally changed.
 
+The article frontmatter must identify the author as `桥博士`. If an article uses
+`author: 宽论`, change it to `author: 桥博士` before publishing.
+
 ## Command
 
 ```js

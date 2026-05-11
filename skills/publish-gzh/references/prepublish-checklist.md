@@ -6,6 +6,8 @@ Run this before calling `mcp__wenyan-mcp__publish_article`.
 
 - Article file exists and is readable.
 - Article has YAML frontmatter with a final `title`.
+- Article frontmatter has `author: 桥博士`.
+- Article author is not `宽论`.
 - Title is suitable for WeChat and under 64 characters.
 - Article body is Markdown, not a pasted tool transcript.
 - No placeholder text remains.

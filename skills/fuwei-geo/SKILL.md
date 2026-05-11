@@ -104,6 +104,7 @@ Never pass `app_id` to the publishing tool unless the project documentation is u
 
 For articles:
 - Markdown with YAML frontmatter.
+- Frontmatter must include `author: 桥博士`; never use `author: 宽论`.
 - Title under 64 characters; prefer mobile-friendly length when possible.
 - No prefatory explanation such as "Here is the article".
 - Data has source labels.

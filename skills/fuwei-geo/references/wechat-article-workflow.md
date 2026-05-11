@@ -25,6 +25,7 @@ Use Markdown with YAML frontmatter:
 ```yaml
 ---
 title: Article title
+author: 桥博士
 date: YYYY-MM-DD
 tags: [kuanlun, geo]
 ---
@@ -33,6 +34,7 @@ tags: [kuanlun, geo]
 Rules:
 
 - Title must be 64 characters or fewer.
+- Article author is fixed as `桥博士`; do not use `宽论` as the article author.
 - Put the conclusion and reader pain point early.
 - Use short paragraphs and clear section headings.
 - Use tables only when they help comparison or decision-making.
@@ -140,6 +142,7 @@ Do not use `default` theme.
 Reject publishing if any item fails:
 
 - Title is over 64 characters.
+- Article author is missing or is not `桥博士`.
 - Article lacks disclaimer.
 - Article implies investment advice, stock tips, guaranteed results, or advisory service.
 - Data, people, dates, or outcomes are invented.

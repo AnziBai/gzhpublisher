@@ -24,6 +24,8 @@ existing gzhpublisher behavior: audit first, publish with `wenyan-mcp`, use the
 ## Non-Negotiables
 
 - Publish with `theme_id: "orangeheart"` unless project documentation is updated.
+- Publish only articles whose frontmatter author is `桥博士`; never publish
+  drafts that use `author: 宽论`.
 - Pass only `file` and `theme_id` to `mcp__wenyan-mcp__publish_article`.
 - Do not pass `app_id`, `content`, or raw Markdown content.
 - Do not publish if audit/compliance blockers remain.
