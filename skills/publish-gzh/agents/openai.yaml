@@ -1,0 +1,3 @@
+display_name: Publish GZH
+short_description: WeChat draft publishing workflow for gzhpublisher
+default_prompt: Use this skill when publishing reviewed gzhpublisher Markdown articles to WeChat drafts with wenyan-mcp and the orangeheart theme.

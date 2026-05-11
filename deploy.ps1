@@ -1,19 +1,37 @@
 #!/usr/bin/env pwsh
-# deploy.ps1 — 将仓库中的 agents 和 skills 部署到 ~/.claude/
-# 用法：在 gzhpublisher 目录下运行 .\deploy.ps1
+# Deploy repository agents and skills to ~/.claude/.
+# Run from the gzhpublisher repository with: .\deploy.ps1
 
 $ClaudeDir = "$env:USERPROFILE\.claude"
-$RepoDir   = $PSScriptRoot
+$RepoDir = $PSScriptRoot
 
-Write-Host "部署 agents..."
-Copy-Item "$RepoDir\agents\*.md" "$ClaudeDir\agents\" -Force
+$AgentsDir = Join-Path $ClaudeDir "agents"
+$SkillsDir = Join-Path $ClaudeDir "skills"
 
-Write-Host "部署 skills..."
-if (-not (Test-Path "$ClaudeDir\skills\fuwei-geo")) {
-    New-Item -ItemType Directory -Path "$ClaudeDir\skills\fuwei-geo" -Force | Out-Null
+if (-not (Test-Path $AgentsDir)) {
+    New-Item -ItemType Directory -Path $AgentsDir -Force | Out-Null
 }
-Copy-Item "$RepoDir\skills\fuwei-geo\*" "$ClaudeDir\skills\fuwei-geo\" -Recurse -Force
+
+if (-not (Test-Path $SkillsDir)) {
+    New-Item -ItemType Directory -Path $SkillsDir -Force | Out-Null
+}
+
+Write-Host "Deploying agents..."
+Copy-Item (Join-Path $RepoDir "agents\*.md") $AgentsDir -Force
+
+Write-Host "Deploying skills..."
+Get-ChildItem -Path (Join-Path $RepoDir "skills") -Directory | ForEach-Object {
+    $SkillName = $_.Name
+    $SkillDest = Join-Path $SkillsDir $SkillName
+
+    if (-not (Test-Path $SkillDest)) {
+        New-Item -ItemType Directory -Path $SkillDest -Force | Out-Null
+    }
+
+    Copy-Item (Join-Path $_.FullName "*") $SkillDest -Recurse -Force
+    Write-Host "  - $SkillName"
+}
 
 Write-Host ""
-Write-Host "完成！已部署到 $ClaudeDir"
-Write-Host "重启 Claude Code 后生效。"
+Write-Host "Done. Deployed to $ClaudeDir"
+Write-Host "Restart Claude Code for changes to take effect."
