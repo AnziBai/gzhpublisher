@@ -61,3 +61,9 @@ powershell -NoProfile -ExecutionPolicy Bypass -File scripts\install_self_evoluti
 
 Use `-Force` only when intentionally overwriting an existing hook script or policy
 document.
+
+## Current Handoff
+
+For the 2026-05-12 self-evolution installation and local workspace rename status,
+read `docs/handoff-2026-05-12-self-evolution.md` before assuming all local
+`New project *` directories have been renamed.
