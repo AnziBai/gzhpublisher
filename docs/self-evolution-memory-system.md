@@ -18,6 +18,23 @@ gzhpublisher work without turning every session into permanent context.
 - **Suggest before applying:** agents propose memory and skill updates before
   writing them, unless the user directly requested implementation.
 
+## Installing Hooks In Another Project
+
+Run this from the gzhpublisher repository:
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts\install_self_evolution_hooks.ps1 -TargetRepo "C:\path\to\new-project" -InstallPolicy
+```
+
+The installer copies `.githooks/` and `scripts/self_evolution_hook.ps1`, sets
+`core.hooksPath=.githooks`, and optionally creates starter policy files when they
+do not already exist. It does not overwrite existing project policy unless
+`-Force` is passed.
+
+This follows the Agent Skills convention that reusable executable logic should
+live in scripts and remain self-contained, while long guidance stays in docs or
+references.
+
 ## Three Memory Layers
 
 | Layer | Location | Use For | Avoid |

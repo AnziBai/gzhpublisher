@@ -5,14 +5,15 @@ param(
     [string]$Event
 )
 
-$ErrorActionPreference = "Stop"
+$ErrorActionPreference = "Continue"
 
-$RepoRoot = git rev-parse --show-toplevel 2>$null
+$RepoCandidate = Resolve-Path (Join-Path $PSScriptRoot "..")
+$RepoRoot = git -C $RepoCandidate rev-parse --show-toplevel 2>$null
 if (-not $RepoRoot) {
     exit 0
 }
 
-$GitDir = git rev-parse --git-dir 2>$null
+$GitDir = git -C $RepoRoot rev-parse --git-dir 2>$null
 if (-not $GitDir) {
     exit 0
 }
@@ -21,12 +22,12 @@ if (-not [System.IO.Path]::IsPathRooted($GitDir)) {
     $GitDir = Join-Path $RepoRoot $GitDir
 }
 
-$Branch = git branch --show-current 2>$null
+$Branch = git -C $RepoRoot branch --show-current 2>$null
 if (-not $Branch) {
     $Branch = "detached"
 }
 
-$Head = git rev-parse --short HEAD 2>$null
+$Head = git -C $RepoRoot rev-parse --short HEAD 2>$null
 if (-not $Head) {
     $Head = "unknown"
 }

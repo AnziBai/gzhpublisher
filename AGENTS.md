@@ -50,3 +50,14 @@ update, or repeated mistake:
    - skill candidates
 5. Wait for user confirmation before changing memory or skills, unless the user
    has already asked to implement those exact changes.
+
+## Installing This In New Projects
+
+From this repository, run:
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts\install_self_evolution_hooks.ps1 -TargetRepo "C:\path\to\project" -InstallPolicy
+```
+
+Use `-Force` only when intentionally overwriting an existing hook script or policy
+document.

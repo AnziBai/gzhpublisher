@@ -1,6 +1,8 @@
 # Skill Writing Standards
 
-Source: https://agentskills.io/skill-creation/best-practices
+Sources:
+- https://agentskills.io/skill-creation/best-practices
+- https://agentskills.io/specification
 
 Use this file when creating or revising skills in this repository.
 
@@ -40,6 +42,8 @@ Use this file when creating or revising skills in this repository.
   become candidates; repeated lessons become skill rules.
 - Hard user red lines may be added immediately to project memory and relevant
   skills.
+- Put reusable executable logic under `scripts/`; scripts should be self-contained,
+  provide clear errors, and handle edge cases gracefully.
 
 ## Checklist
 
