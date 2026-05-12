@@ -36,6 +36,10 @@ Use this file when creating or revising skills in this repository.
 - Reference files must be linked directly from `SKILL.md` with clear "when to read"
   instructions.
 - Do not create redundant README/quickstart/changelog files inside a skill folder.
+- Use the two-strike gate from `self-evolution-memory-system.md`: one-off lessons
+  become candidates; repeated lessons become skill rules.
+- Hard user red lines may be added immediately to project memory and relevant
+  skills.
 
 ## Checklist
 

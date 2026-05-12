@@ -20,6 +20,8 @@ existing gzhpublisher behavior: audit first, publish with `wenyan-mcp`, use the
 3. If publishing mechanics or error handling matter, read `references/publishing-runbook.md`.
 4. Publish only after the article is ready for a WeChat draft.
 5. Report the result with article path, theme, and Media ID or exact failure.
+6. If the publish flow exposed a repeated issue or user red line, use
+   `../self-evolution/SKILL.md` to propose memory or skill updates.
 
 ## Non-Negotiables
 

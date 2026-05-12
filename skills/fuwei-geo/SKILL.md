@@ -28,6 +28,8 @@ loading the entire knowledge base up front.
 2. Produce a short plan before generating or publishing content. Name the article type, target reader, evidence source, assets needed, and compliance risks.
 3. Execute the relevant workflow. Prefer concrete defaults over asking the user to choose from a menu.
 4. Validate with the checklist in the relevant reference before final output or publish.
+5. After a meaningful phase, use `../self-evolution/SKILL.md` to propose memory,
+   wiki, or skill updates before writing them.
 
 ## Non-Negotiables
 
@@ -123,3 +125,5 @@ For audits:
 - `references/benchmark-articles/` can be large. Read the index first; then load only matching examples.
 - If instructions conflict, follow this order: compliance boundaries in `references/kuanlun-project-summary.md`, WeChat renderer constraints in `references/wechat-article-workflow.md`, then general GEO strategy.
 - Some older docs may mention Markdown local images or `default` theme. Treat those as stale; use HTML local image tags where needed and `orangeheart`.
+- User corrections that change future behavior should be routed through
+  `../self-evolution/SKILL.md` at stage close.
