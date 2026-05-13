@@ -105,8 +105,8 @@ gzhpublisher/assets/
 │   ├── 图 6.5 交易的三大要素.jpg
 │   └── ...（共 105 张）
 ├── 概率的朋友封面.jpg      # 书籍封面（文章内推广区块用）
-├── 微信二维码-桥楚.jpg     # 扫码引导（文章结尾固定模块）
-└── 免费free.gif            # FREE 动图（文章结尾固定模块）
+├── 微信二维码-桥楚.jpg     # 扫码引导备用；实际路径在 kuanlun-geo-writer-enhanced.md 中配置
+└── 免费free.gif            # ⚠️ 已废弃（违反微信规范第6条），不再插入文章
 ```
 
 > **注意**：`config/image_embeddings_index.json` 中的图片路径是绝对路径，在新机器上第一次使用前需运行 [步骤 3.5](#35-重建图片向量索引) 重建索引。
@@ -123,7 +123,9 @@ GLM_API_KEY = "你的GLM_API_Key"
 
 ### 3.4 配置 wenyan-mcp
 
-wenyan-mcp 负责将文章发布到微信公众号。在 `~/.claude/.claude.json` 的 MCP 配置中添加：
+wenyan-mcp 负责将文章发布到微信公众号。
+
+**CLI 工作流（直接在 Claude Code 中调用）**：在 `~/.claude/.claude.json` 的 MCP 配置中添加：
 
 ```json
 {
@@ -139,6 +141,8 @@ wenyan-mcp 负责将文章发布到微信公众号。在 `~/.claude/.claude.json
   }
 }
 ```
+
+**gzh-platform Web 界面（推荐）**：平台使用 `gzh-platform/backend/publish_wenyan.mjs`，直接调用 `@wenyan-md/core` Node.js 库发布，不经过 Claude CLI。这是为了绕过 `claude --print` headless 模式无法加载 MCP 服务的架构限制（MCP server 在 headless 模式下永远处于 pending 状态）。Web 界面只需在 `backend/.env` 中配置 `WECHAT_APP_ID` 和 `WECHAT_APP_SECRET`，无需修改 MCP 配置。
 
 微信公众号 AppID/AppSecret 在：[mp.weixin.qq.com](https://mp.weixin.qq.com) → 开发 → 基本配置
 
@@ -173,10 +177,10 @@ python scripts/generate_image_embeddings.py
 |------|---------|------|
 | 第 1 步：生成文章 | **Opus**（主进程直接执行） | 创作质量关键，需要深度理解 |
 | 第 2 步：自动配图 | **Sonnet**（executor agent） | 执行脚本，无需深度推理 |
-| 第 3 步：审查文章 | **Sonnet**（executor agent） | 按清单逐项检查，标准明确 |
-| 第 4 步：发布文章 | **Sonnet**（executor agent） | MCP 调用，纯执行操作 |
+| 第 3 步：审查文章 | **Opus**（主进程直接执行） | 排版格式细节需深度理解，Sonnet 会漏；不可委派 |
+| 第 4 步：发布文章 | **Sonnet**（executor agent） | 纯执行操作 |
 
-**执行方式**：Opus 主进程生成文章后，将第 2-4 步委派给 Sonnet executor agent 一次性完成。
+**执行方式**：第 1、3 步由 Opus 主进程直接执行；第 2、4 步委派 Sonnet executor agent。
 
 ---
 
@@ -307,12 +311,14 @@ git push
 4. **竞赛战绩表格**（可选）：国信证券、科大讯飞、期货日报等
 5. **标准结尾**：
    ```
-   📚 想深入学习宽论实战技巧？
-   [二维码] 扫码找助理，发送"宽论"，领取宽论实战课程
-   [FREE 动图]
-   如果本文对您有帮助...感谢您的阅读。
+   📚 **想深入学习宽论实战技巧？**
+   [二维码 <img> 标签]
+   交流探讨·桥博士
+   如果本文对您有帮助...还请麻烦给文章点个在看或者免费的赞。感谢您的阅读。
    *免责声明：本文介绍的是量化分析技术培训，不构成投资建议。投资有风险，入市需谨慎。*
    ```
+   > ❌ 禁止："扫码找助理，领取课程/资料"类导流文字（违反微信规范 5.3.5）  
+   > ❌ 禁止：FREE 动图（违反微信规范第 6 条，2026-05-09 起废弃）
 
 ### 禁止内容
 
@@ -350,8 +356,8 @@ gzhpublisher/
 ├── assets/                              # 图片资源（随仓库提供）
 │   ├── 概率的朋友配图/                  # 105 张书中图表
 │   ├── 概率的朋友封面.jpg
-│   ├── 微信二维码-桥楚.jpg
-│   └── 免费free.gif
+│   ├── 微信二维码-桥楚.jpg              # 备用；实际使用路径可能因配置而异
+│   └── 免费free.gif                    # ⚠️ 已废弃（违反微信规范第6条），不再使用
 │
 ├── articles/
 │   ├── published/                       # 已发布文章（每篇 = 一个 git checkpoint）
@@ -398,9 +404,11 @@ IP 不在微信公众号白名单。
 
 ### Q: 运行 auto_add_images.py 后 frontmatter 出现两遍
 
-脚本的 frontmatter 提取-重组逻辑偶尔触发重复。
+脚本的 frontmatter 提取-重组逻辑偶尔触发重复，多次运行会叠加。
 
-**解决**：手动删除文章开头多余的第二段 `---` frontmatter 块。
+**解决**：手动删除文章开头多余的重复 `---` frontmatter 块，保留含 `cover:` 字段的那一个。
+
+> 使用 **gzh-platform Web 界面**发布时，`publish_service.py` 会在步骤 0 自动执行 `_dedup_frontmatter()` 清理，无需手动处理。
 
 ---
 
