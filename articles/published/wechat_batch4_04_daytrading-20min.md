@@ -1,7 +1,7 @@
 ---
 title: 每天盯盘8小时有效交易不超20分钟，怎么破？
 author: 桥博士
-cover: C:/Users/anzib/gzhpublisher/assets/概率的朋友配图/图 10.1 人生中总有机会.jpg
+cover: C:/Users/anzib/gzhpublisher/assets/概率的朋友配图/图 10.1 人生成功与概率优势.jpg
 ---
 
 我做过一个统计。
@@ -130,7 +130,7 @@ cover: C:/Users/anzib/gzhpublisher/assets/概率的朋友配图/图 10.1 人生�
 你今天盯了八小时，有效操作了几分钟？又有几分钟，是手痒动出来的？
 
 <div style="text-align: center; margin: 30px 0 20px 0;">
-  <img src="C:/Users/anzib/gzhpublisher/assets/微信二维码-桥楚.jpg" style="border-radius: 8px; width: 200px; display: block; margin: 0 auto 12px auto;" alt="桥博士微信" />
+  <img src="C:/Users/anzib/OneDrive/图片/执照身份文件/桥之队致源二维码.png" style="border-radius: 8px; width: 200px; display: block; margin: 0 auto 12px auto;" alt="桥博士微信" />
   <p style="font-size: 13px; color: #888; line-height: 1.8;">交流探讨 · 桥博士</p>
 </div>
 <div style="text-align: center; margin: 20px 0; padding: 15px; color: #666;">
