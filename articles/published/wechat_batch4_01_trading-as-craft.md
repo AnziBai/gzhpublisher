@@ -79,10 +79,10 @@ cover: C:/Users/anzib/gzhpublisher/assets/概率的朋友配图/图 1.5 胜率�
 三年学了一堆指标却越学越慌的人，和那个开始问自己"我凭什么做这笔"的人，差的不是技术，是有没有自己的判断体系。手艺这东西，别人能教你方法，但最后那套属于你自己的判断，得你自己一笔一笔练出来。练出来了，你就再也不用看别人脸色交易了。
 
 <div style="text-align: center; margin: 30px 0 20px 0;">
-  <img src="C:/Users/anzib/gzhpublisher/assets/微信二维码-桥楚.jpg" 
+  <img src="C:/Users/anzib/OneDrive/图片/执照身份文件/桥之队致源二维码.png" 
        style="border-radius: 8px; width: 200px; display: block; margin: 0 auto 12px auto;" 
        alt="桥博士微信" />
-  <p style="font-size: 13px; color: #888; line-height: 1.8;">交流探讨 · 桥博士</p>
+  <p style="font-size: 13px; color: #888; line-height: 1.8; text-align: center; font-weight: bold;">交流探讨 · 桥博士</p>
 </div>
 
 <div style="text-align: center; margin: 20px 0; padding: 15px; color: #666;">

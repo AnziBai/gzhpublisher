@@ -123,8 +123,8 @@ cover: C:/Users/anzib/gzhpublisher/assets/概率的朋友配图/图 6.5 交易�
 </div>
 
 <div style="text-align: center; margin: 30px 0 20px 0;">
-  <img src="C:/Users/anzib/gzhpublisher/assets/微信二维码-桥楚.jpg" style="border-radius: 8px; width: 200px; display: block; margin: 0 auto 12px auto;" alt="桥博士微信" />
-  <p style="font-size: 13px; color: #888; line-height: 1.8;">交流探讨 · 桥博士</p>
+  <img src="C:/Users/anzib/OneDrive/图片/执照身份文件/桥之队致源二维码.png" style="border-radius: 8px; width: 200px; display: block; margin: 0 auto 12px auto;" alt="桥博士微信" />
+  <p style="font-size: 13px; color: #888; line-height: 1.8; text-align: center; font-weight: bold;">交流探讨 · 桥博士</p>
 </div>
 <div style="text-align: center; margin: 20px 0; padding: 15px; color: #666;">
   <p style="font-size: 14px; line-height: 1.8;">如果本文对您有帮助，还请麻烦给文章点个在看或者免费的赞，感谢您的阅读。</p>
